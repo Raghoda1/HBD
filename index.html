@@ -621,11 +621,16 @@
 </script>
 
     </script>
-    <dev>
-        <audio autoplay>
-            <source src="https://play.imusicvn.com/stream/Mgbb1byycZvy" type="audio/mpeg">
-        </audio>
-    </dev>
+   <script>
+  const audio = new Audio("https://play.imusicvn.com/stream/Mgbb1byycZvy");
+
+  function handleClick() {
+    audio.play();
+    window.removeEventListener('click', handleClick);
+  }
+
+  window.addEventListener('click', handleClick);
+</script>
 
 </body>
 </html>
