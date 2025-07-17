@@ -622,14 +622,19 @@
 
     
    
-  const audio = new Audio("https://play.imusicvn.com/stream/Mgbb1byycZvy");
+  
+  const audio = new Audio("Ly.mp3");
 
   function handleClick() {
-    audio.play();
+    audio.play().catch((e) => {
+      console.error("Error playing audio:", e);
+    });
     window.removeEventListener('click', handleClick);
   }
 
   window.addEventListener('click', handleClick);
+
+
 </script>
 
 </body>
