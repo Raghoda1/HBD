@@ -31,21 +31,18 @@
             }
             
            
-            .canvas {
-                margin: 0 auto;
-                display: block;
+            canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
             }
             img#logo {
-                width: 128px;
-                background-size: cover;
-                border-radius: 200px;
-                box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
-                border: 3px solid #00a0ff;
-                opacity: 1;
-                margin: 0 auto;
-                margin-top: 20px;
-                margin-bottom: 100px;
-                transition: all 1.0s;
+  position: relative;
+  z-index: 2;
+}
             }
             #logo:hover {
                 box-shadow: 0 0 10px #fff;
@@ -64,16 +61,16 @@
                 position: absolute;
                 text-align: center;
             }
-            .text {
+           .text {
   position: absolute;
   bottom: 30px;
   width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: 16px;
-  z-index: 2;
+  font-size: 18px;
+  color: white;
+  z-index: 5;
 }
-
             
             .text-right {
                 position: fixed;
