@@ -139,8 +139,25 @@
         }
         show_date_time();
     </script>
-    <script>
-        var S = {
+   <script>
+  const audio = new Audio("Ly.mp3");
+
+  function startSite() {
+    // ✅ شغّل الصوت
+    audio.play().catch(() => {});
+
+    // ✅ شيل رسالة الضغط
+    document.getElementById("click-to-play").style.display = "none";
+
+    // ✅ شغّل الموقع كله (التأثيرات – الكتابة – العداد...)
+    initEverything();
+  }
+
+  document.getElementById("click-to-play").addEventListener("click", startSite);
+
+  // 🧠 كل الكود الأساسي للموقع نحطه جوا دي
+  function initEverything() {
+    // هنا حط الكود كله بتاعك:  var S = {
             init: function () {
                 S.Drawing.init('.canvas');
                 document.body.classList.add('body--ready');
@@ -648,7 +665,18 @@ document.getElementById("click-to-play").addEventListener("click", () => {
 });
 
 
+    // تأثير المطر
+    // تحريك الكتابة
+    // العداد
+    // إلخ...
 
+    // مثال بسيط:
+    setInterval(() => {
+      console.log("الموقع شغّال دلوقتي ✅");
+    }, 1000);
+
+    // ✨ انسخ كل الأكواد القديمة بتاعتك هنا جوه الـ initEverything()
+  }
 </script>
 
 </body>
