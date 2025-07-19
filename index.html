@@ -101,7 +101,24 @@
     <span id="span_dt_dt"></span><br>
    Since we love each other 💖
 </p>
+<div id="click-to-play" style="
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+">
+  اضغط في أي مكان لتشغيل الموسيقى 🎵
+</div>
 
+        
     <script language="javascript">
         function show_date_time() {
             window.setTimeout("show_date_time()", 1000);
@@ -621,16 +638,15 @@
     
    
   
-  const audio = new Audio("Ly.mp3");
-
-  function handleClick() {
-    audio.play().catch((e) => {
-      console.error("Error playing audio:", e);
-    });
-    window.removeEventListener('click', handleClick);
-  }
-
   window.addEventListener('click', handleClick);
+
+        const audio = new Audio("Ly.mp3"); // اسم الملف بتاعك
+
+document.getElementById("click-to-play").addEventListener("click", () => {
+  audio.play().catch(() => {});
+  document.getElementById("click-to-play").style.display = "none";
+});
+
 
 
 </script>
